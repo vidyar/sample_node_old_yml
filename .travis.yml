@@ -1,5 +1,5 @@
 # Language setting
-language: python
+language: node_jss
 
 #build_image: drydock/u12nod:prod
 

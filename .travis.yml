@@ -14,7 +14,7 @@ env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
 branches:
-  except:
+  only:
     - testexclude
     
 install:

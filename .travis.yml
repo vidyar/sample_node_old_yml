@@ -6,6 +6,8 @@ language: node_js
 # Version number
 node_js
   - 0.12
+  - 0.11
+  - 5.0
 
 # The path for Xunit to output test reports
 env:

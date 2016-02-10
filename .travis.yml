@@ -12,7 +12,7 @@ env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
 branches:
-  only:
+  except:
     - master
     
 install:

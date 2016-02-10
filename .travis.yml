@@ -12,8 +12,8 @@ env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
 branches:
-  only:
-    - master
+  except:
+    - testexclude
     
 install:
   - source ~/.nvm/nvm.sh && nvm install 0.12

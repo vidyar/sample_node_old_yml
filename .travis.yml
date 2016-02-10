@@ -13,28 +13,16 @@ node_js:
 env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
-branches:
- only:
-    - master
     
-install:
-  - source ~/.nvm/nvm.sh && nvm install 0.12
-  - node --version
-  - npm install
-#  - . installMongo.sh
-#  - cat /etc/mongod.conf
-#  - sudo mongod --smallfiles &
-#  - sleep 15
-#  - mongo --eval 'db.collection.find()'
-
+install: true
+  
 # Create directories for test and coverage reports
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
 # Running the tests with grunt
-script:
-  - grunt
+script: true
 
 # Tell istanbul to generate a coverage report
 after_script:

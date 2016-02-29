@@ -8,11 +8,15 @@ language: node_js
 node_js:
   #- 0.12
   - 0.11
-  #- 5.0
+  - 0.10
+  
 
 # The path for Xunit to output test reports
 env:
+ global:
   - XUNIT_FILE=shippable/testresults/result.xml
+  - secure: mtssCkSN3nqtNdy0b4JD1/Qo8mRVADq8ULUOGBe1bQQHjFm9yhKdkqPGBPJsCYwdKuUKlpr/gtaizT+aITQLjBhGZMZso58X25x9XPioA5em9qHcv2OpdP50ggjVL75BR3MyLoeySJleSYDkz85ZoRwQAimRGnLqMvkJsyBuLdPhNso2XkN5JQBWbgngw5Sf1D5SFwbVfjZIfhB+4Q4I40AKs3ALCkqHE0ufpYyLw4XP90+//vkozaZs1dupAAeaTLbimUliJNxpYsq+CTihoSTdwQInZwNGFnySJKk1nALMcrdHFlUJroeiC/hZc2G/ULqbmGBUKQXfhgyNSg2aFQ==
+  
 
 branches:
  only:
@@ -36,6 +40,7 @@ before_script:
 # Running the tests with grunt
 script:
   - grunt
+  - echo $prod1
 
 # Tell istanbul to generate a coverage report
 after_script:

@@ -21,8 +21,7 @@ branches:
  only:
     - "no-scripts"
 
-script: 
-   - "true"
+script: true
 
 notifications:
  email:
